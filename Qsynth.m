@@ -64,6 +64,7 @@ function Qs = Qsynth(Qh, Ns, p, n)
 
         % The correlation matrices should use the historical Z's
         % (the "appended years" do not preserve correlation)
+        % disp(corr(Z(1:Nh,:)));
         U = chol(corr(Z(1:Nh,:)));
         U_prime = chol(corr(Zh_prime(1:Nh-1,:)));
 
@@ -80,6 +81,7 @@ function Qs = Qsynth(Qh, Ns, p, n)
         Zs(:,27:52) = Zs_original(2:Ns, 27:52);
 
         for i=1:52
+            Zs(:,i) = (Zs(:,i) - mean(Zs(:,i))) / std(Zs(:,i)); % fix
             Qsk(:,i) = exp(Zs(:,i)*sigma(i) + mu(i));
         end
         

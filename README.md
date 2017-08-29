@@ -1,11 +1,15 @@
-###Synthetic streamflow generator (Qsynth)
+### Synthetic streamflow generator (Qsynth)
 
-Matlab implementation of a weekly synthetic streamflow generator based on Cholesky decomposition. Extends the method developed by [Kirsch et al. (2013)](http://dx.doi.org/10.1061/(ASCE)WR.1943-5452.0000287) to allow for adjustable frequency and severity of droughts.
+Matlab implementation of a weekly synthetic streamflow generator based on Cholesky decomposition. Extends the method developed by Kirsch et al. (2013) to allow for adjustable frequency and severity of droughts.
 
-**Citation:**
-Kirsch, B. R., G. W. Characklis, and H. B. Zeff (2013), Evaluating the impact of alternative hydro-climate scenarios on transfer agreements: Practical improvement for generating synthetic streamflows, Journal of Water Resources Planning and Management, 139(4), 396–406.
+**Citations:**
 
-####Quick start
+* Herman, J.D, H.B. Zeff, J.R. Lamontagne, P.M. Reed, and G.W. Characklis, [Synthetic drought scenario generation to support bottom-up water supply vulnerability assessments](http://ascelibrary.org/doi/full/10.1061/%28ASCE%29WR.1943-5452.0000701), Journal of Water Resources Planning and Management, 142(11), 04016050, 2016.
+
+* Kirsch, B. R., G. W. Characklis, and H. B. Zeff (2013), [Evaluating the impact of alternative hydro-climate scenarios on transfer agreements: Practical improvement for generating synthetic streamflows](http://ascelibrary.org/doi/10.1061/%28ASCE%29WR.1943-5452.0000287), Journal of Water Resources Planning and Management, 139(4), 396–406.
+
+
+#### Quick start
 Historical data are included in `inflow-data`. See `main.m` for an example of generating multiple realizations of synthetic flows. Make sure the output directory `inflow-synthetic/` exists.
 
 A single realization can be generated like this:
